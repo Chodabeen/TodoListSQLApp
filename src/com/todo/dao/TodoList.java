@@ -233,9 +233,10 @@ public class TodoList {
 			stmt = conn.createStatement();
 			String sql = "SELECT DISTINCT category FROM list";
 			ResultSet rs = stmt.executeQuery(sql);
-			rs.next();
-			String cate = rs.getString("category");
-			list.add(cate);
+			while(rs.next()) {
+				String cate = rs.getString("category");
+				list.add(cate);
+			}
 			stmt.close();
 		}catch (SQLException e) {
 			e.printStackTrace();

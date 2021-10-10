@@ -96,7 +96,7 @@ public class TodoItem {
 
 	@Override
 	public String toString() {
-		return id + " [" + category + "] " + title + " - " + desc + " - " + due_date + " - "  + current_date + "\n";
+		return id + " [" + category + "] " + title + " - " + desc + " - [" + due_date + "] - "  + current_date + "\n";
 	}
 
 
