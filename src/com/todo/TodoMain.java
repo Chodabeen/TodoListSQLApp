@@ -79,6 +79,9 @@ public class TodoMain {
 				TodoUtil.completeItem(l, index);
 				break;
 				
+			case "ls_comp":
+				TodoUtil.listAll(l, 1);
+				break;
 				
 			case "help":
 				Menu.displaymenu();

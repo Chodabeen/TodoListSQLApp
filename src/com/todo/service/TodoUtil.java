@@ -147,6 +147,17 @@ public class TodoUtil {
 	
 	
 	
+	public static void listAll(TodoList l, int comp) {
+		int count = 0;
+		for (TodoItem item : l.getList(comp)) {
+			System.out.println(item.toString());
+			count++;
+		}
+		System.out.printf("총 %d개의 목록이 완료되었습니다\n", count);
+	}
+	
+	
+	
 	public static void listAll(TodoList l, String orderby, int ordering) {
 		System.out.printf("[총 %d개의 목록]\n", l.getCount());
 		for (TodoItem item : l.getOrderedList(orderby, ordering)) {
